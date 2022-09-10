@@ -29,16 +29,10 @@ int main(void)
 					putchar(' ');
 					r_num2++;
 				}
-				r_num2 = 0;
 				r_num1++;
 			}
-			r_num1 = 0;
-			r_num2 = 0;
 			l_num2++;
 		}
-		r_num1 = 0;
-		r_num2 = 0;
-		l_num2 = 0;
 		l_num1++;
 	}
 	putchar('\n');

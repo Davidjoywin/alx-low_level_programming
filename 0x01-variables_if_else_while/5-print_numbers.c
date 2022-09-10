@@ -1,15 +1,18 @@
 #include <stdio.h>
 
 /**
- * main - initialization of alphabet code
+ * main - initialization of to print numbers
  * Return: return 0
  */
 
 int main(void)
 {
-	for (int i = 0; i < 10; i++)
+	int num;
+
+	while (num < 10)
 	{
-		printf("%d", i);
+		printf("%d", num);
+		num++;
 	}
 	printf("\n");
 	return (0);

@@ -20,8 +20,11 @@ int main(void)
 				putchar(48 + left);
 				putchar(48 + mid);
 				putchar(48 + right);
-				putchar(',');
-				putchar(' ');
+				if (left != 10 - 3)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 				right++;
 			}
 			mid++;

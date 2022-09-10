@@ -16,8 +16,11 @@ int main(void)
 		{
 			putchar(48 + left);
 			putchar(48 + right);
-			putchar(',');
-			putchar(' ');
+			if (left != 10 - 2)
+			{
+				putchar(',');
+				putchar(' ');
+			}
 			right++;
 		}
 		left++;

@@ -7,10 +7,10 @@
 
 int main(void)
 {
-	int l_num1 = 0;
-	int l_num2;
-	int r_num1;
 	int r_num2;
+	int r_num1;
+	int l_num2;
+	int l_num1 = 0;
 
 	while (l_num1 < 10)
 	{
@@ -25,12 +25,12 @@ int main(void)
 				{
 					if (!(l_num1 == r_num2 && l_num2 == r_num1))
 					{
-						putchar(48 + l_num1);
-						putchar(48 + l_num2);
+						putchar('0' + l_num1);
+						putchar('0' + l_num2);
 						putchar(' ');
-						putchar(48 + r_num1);
-						putchar(48 + r_num2);
-						if (!(l_num1 == l_num2 && r_num1 + r_num2 == 17 && r_num1 == 9))
+						putchar('0' + r_num1);
+						putchar('0' + r_num2);
+						if (!(l_num1 + l_num2 == 18 && r_num2 + r_num1 == 17 && r_num1 == 9))
 						{
 							putchar(',');
 							putchar(' ');
@@ -47,3 +47,4 @@ int main(void)
 	putchar('\n');
 	return (0);
 }
+

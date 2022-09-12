@@ -1,50 +1,48 @@
 #include <stdio.h>
 
 /**
- * main - initialization of alphabet code
- * Return: return 0
+ * main - Prints numbers between 00 to 99.
+ *
+ * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-	int r_num2;
-	int r_num1;
-	int l_num2;
-	int l_num1 = 0;
+int i, e, g, h, op1, op2;
 
-	while (l_num1 < 10)
+i = e = g = h = 48;
+while (h < 58)
+{
+	g = 48;
+	while (g < 58)
 	{
-		l_num2 = 0;
-		while (l_num2 < 10)
+		e = 48;
+		while (e < 58)
 		{
-			r_num1 = 0;
-			while (r_num1 < 10)
+			i = 48;
+			while (i < 58)
 			{
-				r_num2 = 0;
-				while (r_num2 < 10)
+				op1 = (h * 10) + g;
+				op2 = (e * 10) + i;
+				if (op1 < op2)
 				{
-					if (!(l_num1 == r_num2 && l_num2 == r_num1))
-					{
-						putchar('0' + l_num1);
-						putchar('0' + l_num2);
-						putchar(' ');
-						putchar('0' + r_num1);
-						putchar('0' + r_num2);
-						if (!(l_num1 + l_num2 == 18 && r_num2 + r_num1 == 17 && r_num1 == 9))
-						{
-							putchar(',');
-							putchar(' ');
-						}
-					}
-					r_num2++;
+					putchar(h);
+					putchar(g);
+					putchar(' ');
+					putchar(e);
+					putchar(i);
+					if (h == 57 && g == 56 && e == 57 && i == 57)
+						break;
+					putchar(',');
+					putchar(' ');
 				}
-				r_num1++;
+				i++;
 			}
-			l_num2++;
+			e++;
 		}
-		l_num1++;
+		g++;
 	}
-	putchar('\n');
-	return (0);
+	h++;
 }
-
+putchar('\n');
+return (0);
+}

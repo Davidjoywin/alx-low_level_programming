@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  * main - entry point
@@ -11,8 +11,8 @@ int main(void)
 	char word[] = "_putchar";
 	for (int i = 0; i < sizeof(word) - 1; i++)
 	{
-		putchar(word[i]);
+		_putchar(word[i]);
 	}
-	printf("\n");
+	_putchar('\n');
 	return (0);
 }

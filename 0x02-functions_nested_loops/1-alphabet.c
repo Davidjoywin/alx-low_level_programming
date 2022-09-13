@@ -1,14 +1,19 @@
 #include "main.h"
 
 /**
- * main - Entry point
- *
- * Return: return 0
+ * print_alphabet - print all alphabet in lowercase
+ * and print a new line after
+ * Return: void
  */
 
-int main(void)
+void print_alphabet(void)
 {
-	print_alphabet();
+	int i = 0;
+
+	while (i < 26)
+	{
+		_putchar(97 + i);
+		i++;
+	}
 	_putchar('\n');
-	return (0);
 }

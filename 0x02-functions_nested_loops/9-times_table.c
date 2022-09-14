@@ -30,7 +30,7 @@ void times_table(void)
 			}
 			_putchar(48 + second);
 			length++;
-			if (length != 9)
+			if (length != 10)
 			{
 				_putchar(',');
 				_putchar(' ');

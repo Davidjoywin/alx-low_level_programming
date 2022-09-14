@@ -1,44 +1,56 @@
-#include "main.h"
-
-/**
- * times_table - prints the 9 times table, starting with 0
+/*
+ * File: 104-fibonacci.c
  */
 
-void print_times_table(int n)
+#include <stdio.h>
+
+/**
+ * main - Prints the first 98 Fibonacci numbers, starting with
+ *        1 and 2, separated by a comma followed by a space.
+ *
+ * Return: Always 0.
+ */
+int main(void)
 {
-	int tables = 0;
-	int length;
-	int multiplication;
+	int count;
+	unsigned long fib1 = 0, fib2 = 1, sum;
+	unsigned long fib1_half1, fib1_half2, fib2_half1, fib2_half2;
+	unsigned long half1, half2;
 
-	while (tables <= n && n > 0 && n < 15)
+	for (count = 0; count < 92; count++)
 	{
-		length = 0;
-		while (length <= n)
-		{
-			int first, second;
+		sum = fib1 + fib2;
+		printf("%lu, ", sum);
 
-			multiplication = length * tables;
-			first = multiplication / 10;
-			second = multiplication % 10;
-
-			if (first > 0)
-			{
-				_putchar(48 + first);
-			}
-
-			if (tables >= 0 && first == 0 && length > 0)
-			{
-				_putchar(' ');
-			}
-			_putchar(48 + second);
-			length++;
-			if (length != 10)
-			{
-				_putchar(',');
-				_putchar(' ');
-			}
-		}
-		tables++;
-		_putchar('\n');
+		fib1 = fib2;
+		fib2 = sum;
 	}
+
+	fib1_half1 = fib1 / 10000000000;
+	fib2_half1 = fib2 / 10000000000;
+	fib1_half2 = fib1 % 10000000000;
+	fib2_half2 = fib2 % 10000000000;
+
+	for (count = 93; count < 99; count++)
+	{
+		half1 = fib1_half1 + fib2_half1;
+		half2 = fib1_half2 + fib2_half2;
+		if (fib1_half2 + fib2_half2 > 9999999999)
+		{
+			half1 += 1;
+			half2 %= 10000000000;
+		}
+
+		printf("%lu%lu", half1, half2);
+		if (count != 98)
+			printf(", ");
+
+		fib1_half1 = fib2_half1;
+		fib1_half2 = fib2_half2;
+		fib2_half1 = half1;
+		fib2_half2 = half2;
+	}
+	printf("\n");
+	return (0);
 }
+

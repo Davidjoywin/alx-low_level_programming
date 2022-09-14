@@ -50,6 +50,7 @@ void greater_than_98(int n)
 			{
 				first = second / 10;
 				_putchar(48 + first);
+				second %= 10;
 			}
 			_putchar(48 + second);
 			_putchar(48 + third);

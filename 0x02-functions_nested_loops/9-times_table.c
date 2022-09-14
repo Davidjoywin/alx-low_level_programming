@@ -24,7 +24,7 @@ void times_table(void)
 			{
 				_putchar(48 + first);
 			}
-			if (tables > 0 && first == 0)
+			if (tables >= 0 && first == 0)
 			{
 				_putchar(' ');
 			}

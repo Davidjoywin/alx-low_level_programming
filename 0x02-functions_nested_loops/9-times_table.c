@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * times_table - prints the 9 times table, starting with 0
@@ -20,13 +21,13 @@ void times_table(void)
 			multiplication = length * tables;
 			first = multiplication / 10;
 			second = multiplication % 10;
-	
+
 			if (first > 0)
 			{
 				_putchar(48 + first);
 			}
 
-			if (tables >= 0 && first == 0 && length != 10)
+			if (tables >= 0 && first == 0 && length > 0)
 			{
 				_putchar(' ');
 			}
@@ -42,3 +43,10 @@ void times_table(void)
 		_putchar('\n');
 	}
 }
+
+int main(void)
+{
+	times_table();
+	return (0);
+}
+

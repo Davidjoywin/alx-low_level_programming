@@ -14,7 +14,7 @@ int main(void)
 	a = 1;
 	b = 2;
 	printf("%ld, %ld, ", a, b);
-	while (n <= 50 - 2)
+	while (n < 50 - 2)
 	{
 		tmp = a + b;
 		a = b;

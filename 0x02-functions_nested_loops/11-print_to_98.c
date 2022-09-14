@@ -49,12 +49,14 @@ void greater_than_98(int n)
 			if (second > 9)
 			{
 				first = second / 10;
-				second = second % 10;
 				_putchar(48 + first);
 			}
-			putchar(48 + second);
+			_putchar(48 + second);
 			_putchar(48 + third);
 		}
+		else
+		{
+			_putchar('0' + n);
 
 		if (n != 98)
 		{
@@ -91,4 +93,10 @@ void less_than_98(int n)
 void equal_to_98(int n)
 {
 	printf("%d", n);
+}
+
+int main(void)
+{
+	print_to_98(111);
+	return (0);
 }

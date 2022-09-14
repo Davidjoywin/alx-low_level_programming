@@ -28,8 +28,11 @@ void print_times_table(int n)
 			}
 			_putchar(48 + second);
 			length++;
-			_putchar(',');
-			_putchar(' ');
+			if (length != n + 1)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
 		}
 		tables++;
 		_putchar('\n');

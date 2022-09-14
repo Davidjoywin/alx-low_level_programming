@@ -30,8 +30,11 @@ void times_table(void)
 			}
 			_putchar(48 + second);
 			length++;
-			_putchar(',');
-			_putchar(' ');
+			if (length != 9)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
 		}
 		tables++;
 		_putchar('\n');

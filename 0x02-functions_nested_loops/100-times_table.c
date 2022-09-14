@@ -1,56 +1,49 @@
 /*
- * File: 104-fibonacci.c
+ * File: 100-times_table.c
  */
 
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - Prints the first 98 Fibonacci numbers, starting with
- *        1 and 2, separated by a comma followed by a space.
- *
- * Return: Always 0.
+ * print_times_table - Prints the times table of the input,
+ *                     starting with 0.
+ * @n: The value of the times table to be printed.
  */
-int main(void)
+void print_times_table(int n)
 {
-	int count;
-	unsigned long fib1 = 0, fib2 = 1, sum;
-	unsigned long fib1_half1, fib1_half2, fib2_half1, fib2_half2;
-	unsigned long half1, half2;
+	int num, mult, prod;
 
-	for (count = 0; count < 92; count++)
+	if (n >= 0 && n <= 15)
 	{
-		sum = fib1 + fib2;
-		printf("%lu, ", sum);
-
-		fib1 = fib2;
-		fib2 = sum;
-	}
-
-	fib1_half1 = fib1 / 10000000000;
-	fib2_half1 = fib2 / 10000000000;
-	fib1_half2 = fib1 % 10000000000;
-	fib2_half2 = fib2 % 10000000000;
-
-	for (count = 93; count < 99; count++)
-	{
-		half1 = fib1_half1 + fib2_half1;
-		half2 = fib1_half2 + fib2_half2;
-		if (fib1_half2 + fib2_half2 > 9999999999)
+		for (num = 0; num <= n; num++)
 		{
-			half1 += 1;
-			half2 %= 10000000000;
+			_putchar('0');
+
+			for (mult = 1; mult <= n; mult++)
+			{
+				_putchar(',');
+				_putchar(' ');
+
+				prod = num * mult;
+
+				if (prod <= 99)
+					_putchar(' ');
+				if (prod <= 9)
+					_putchar(' ');
+
+				if (prod >= 100)
+				{
+					_putchar((prod / 100) + '0');
+					_putchar(((prod / 10)) % 10 + '0');
+				}
+				else if (prod <= 99 && prod >= 10)
+				{
+					_putchar((prod / 10) + '0');
+				}
+				_putchar((prod % 10) + '0');
+			}
+			_putchar('\n');
 		}
-
-		printf("%lu%lu", half1, half2);
-		if (count != 98)
-			printf(", ");
-
-		fib1_half1 = fib2_half1;
-		fib1_half2 = fib2_half2;
-		fib2_half1 = half1;
-		fib2_half2 = half2;
 	}
-	printf("\n");
-	return (0);
 }
 

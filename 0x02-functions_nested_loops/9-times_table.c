@@ -20,7 +20,7 @@ void times_table(void)
 			multiplication = length * tables;
 			first = multiplication / 10;
 			second = multiplication % 10;
-			_putchar(' ');
+	
 			if (first > 0)
 			{
 				_putchar(48 + first);

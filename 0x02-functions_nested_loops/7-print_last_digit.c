@@ -9,8 +9,9 @@
 
 int print_last_digit(int num)
 {
-	int reminder;
+	int remainder;
 
-	reminder = num % 10;
-	return (reminder);
+	remainder = num % 10;
+	putchar('0' + remainder
+	return (remainder);
 }

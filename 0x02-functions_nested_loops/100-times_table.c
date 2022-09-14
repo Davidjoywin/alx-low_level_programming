@@ -12,10 +12,10 @@ void print_times_table(int n)
 	int length;
 	int multiplication;
 
-	while (tables < n)
+	while (tables < n + 1)
 	{
 		length = 0;
-		while (length < n)
+		while (length < n + 1)
 		{
 			int first, second;
 

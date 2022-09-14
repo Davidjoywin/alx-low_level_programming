@@ -7,8 +7,8 @@
 
 int main(void)
 {
-	int sum;
-	long int i = 0;
+	unsigned long sum;
+	int i = 0;
 
 	while (i < 1024)
 	{
@@ -18,6 +18,6 @@ int main(void)
 		}
 		i++;
 	}
-	printf("%d\n", sum);
+	printf("%ld\n", sum);
 	return (0);
 }

@@ -11,6 +11,7 @@ int print_last_digit(int num)
 {
 	int remainder;
 
+	num *= -1
 	remainder = num % 10;
 	_putchar('0' + remainder);
 	return (remainder);

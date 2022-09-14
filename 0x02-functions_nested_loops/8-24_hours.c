@@ -2,7 +2,7 @@
 
 /**
  * jack_bauer - prints every minute of the day
- * from 00:00 to 23:59
+ * 				from 00:00 to 23:59
  */
 
 void jack_bauer(void)
@@ -21,11 +21,11 @@ void jack_bauer(void)
 				min_unit = 0;
 				while (min_unit <= 9)
 				{
-					_putchar(48 + hour_tens);
-					_putchar(48 + hour_unit);
+					_putchar('0' + hour_tens);
+					_putchar('0' + hour_unit);
 					_putchar(':');
-					_putchar(48 + min_tens);
-					_putchar(48 + min_unit);
+					_putchar('0' + min_tens);
+					_putchar('0' + min_unit);
 					_putchar('\n');
 					min_unit++;
 				}

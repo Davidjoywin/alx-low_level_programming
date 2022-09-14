@@ -20,7 +20,7 @@ int main(void)
 		a = b;
 		b = tmp;
 		printf("%ld", tmp);
-		if (n != 50 - 2)
+		if (n != 50 - 3)
 		{
 			printf(", ");
 		}

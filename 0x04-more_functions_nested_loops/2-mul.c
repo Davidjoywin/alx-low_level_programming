@@ -2,7 +2,8 @@
 
 /**
   * mul - this multiplies two numbers
-  * @params: params to be multiplied
+  * @a: first number to be multiplied
+  * @b: second number to be multiplied
   * Return: return (multiplied result)
   */
 

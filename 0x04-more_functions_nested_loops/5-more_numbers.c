@@ -2,7 +2,7 @@
 
 /**
  * more_numbers - prints 10 times the numbers, from
- * 					from 0 - 14, followed by new line
+ *					from 0 - 14, followed by new line
  */
 
 void more_numbers(void)
@@ -22,4 +22,5 @@ void more_numbers(void)
 			_putchar('0' + i%10);
 		}
 	}
+	_putchar('\n');
 }

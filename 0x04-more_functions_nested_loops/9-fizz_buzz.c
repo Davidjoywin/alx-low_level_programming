@@ -2,12 +2,18 @@
 
 int not_last(int n);
 
+/**
+ * main - entry point for fizzbuzz program
+ * Return: return 0
+ */
+
 int main(void)
 {
 	int n = 0;
 	char fizz[] = "Fizz";
 	char buzz[] = "Buzz";
 	char fizz_buzz[] = "FizzBuzz";
+
 	while (n < 100)
 	{
 		n++;
@@ -50,6 +56,12 @@ int main(void)
 	printf("\n");
 	return (0);
 }
+
+/**
+ * not_last - to check if an the loop ended
+ * @n: params to monitor the end
+ * Return: return either 0 or 1
+ */
 
 int not_last(int n)
 {

@@ -4,21 +4,22 @@
  * puts2 - print characte
  * @str: input string
  *
- * Description: prints character of a string, starting first character
  * Return: Always (0)
  */
 
 void puts2(char *str)
 {
-	int i;
+	int count;
 
-	while (str[i] != '\0')
+	while (count >= 0)
 	{
-		if (i % 2 == 0)
+		if (str[count] == '/0')
 		{
-			_putchar(str[i]);
+			_putchar('\n');
+			break;
 		}
-		i++;
+		if (count % 2 == 0)
+			_putchar(str[count]);
+		count++;
 	}
-	_putchar('\n');
 }

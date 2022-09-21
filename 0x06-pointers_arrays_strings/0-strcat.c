@@ -1,4 +1,6 @@
+
 #include "main.h"
+
 
 /**
  * *_strcat - returns a pointer to the returning string
@@ -11,7 +13,7 @@ char *_strcat(char *dest, char *src)
 {
 	int i, j;
 
-	i = sizeof(dest) / sizeof(char);
+	i = sizeof(dest);
 	j = 0;
 
 	while (src[j] != '\0')
@@ -23,3 +25,4 @@ char *_strcat(char *dest, char *src)
 
 	dest[i] = '\0';
 	return (dest);
+}

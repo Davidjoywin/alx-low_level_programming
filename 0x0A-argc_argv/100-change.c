@@ -6,6 +6,7 @@
  * change for an amount of money
  * @argc: size of argv
  * @argv: array of terminal given argument
+ * Return: return int
  */
 
 int main(int argc, char *argv[])

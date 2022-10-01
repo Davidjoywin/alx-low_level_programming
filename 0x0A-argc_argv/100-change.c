@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	else if (argv[1] < 0)
+	else if (atoi(argv[1]) < 0)
 		printf("0\n");
 
 	coin = atoi(argv[1]);

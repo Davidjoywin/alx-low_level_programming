@@ -49,7 +49,7 @@ char **strtow(char *str)
 			{
 				while (str[j] != ' ')
 				{
-					printf("j = %d; tmp = %d\n", j, tmp);
+				/*	printf("j = %d; tmp = %d\n", j, tmp);*/
 					new_arr[i][tmp] = str[j];
 					j++;
 					tmp++;
@@ -57,7 +57,7 @@ char **strtow(char *str)
 				break;
 			}
 		}
-		printf("The value of split is: %s\n", new_arr[i]);
+/*		printf("The value of split is: %s\n", new_arr[i]);*/
 	}
 	new_arr[size] = NULL;
 	return (new_arr);

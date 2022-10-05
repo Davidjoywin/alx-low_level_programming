@@ -8,7 +8,7 @@
  * @str: string to split
  * Return: return a pointer to an array of strings
  */
-int get_size(char *str);
+int get_w_size(char *str);
 char **allocmem(char *str, int size, char *new_arr[]);
 
 char **strtow(char *str)
@@ -21,7 +21,7 @@ char **strtow(char *str)
 		return (NULL);
 	}
 
-	size = get_size(str);
+	size = get_w_size(str);
 
 	new_arr = malloc(sizeof(char) * (size + 1));
 
@@ -32,34 +32,34 @@ char **strtow(char *str)
 
 	new_arr = allocmem(str, size, new_arr);
 
-	for (i = 0; i < size; i++)
+	j = 0;
+	for (i = 0; i < 3; i++)
 	{
-		void(j);
-		void(tmp);
 		tmp = 0;
 		while (str[j] != '\0')
 		{
-			if (str[j] != ' ')
+			if (str[j] == ' ')
+			{
+				while (str[j] == ' ' && str[j] != '\0')
+				{
+					j++;
+				}
+			}
+			else
 			{
 				while (str[j] != ' ')
 				{
+					printf("j = %d; tmp = %d\n", j, tmp);
 					new_arr[i][tmp] = str[j];
 					j++;
 					tmp++;
 				}
-				new_arr[i][tmp] = '\0';
-			}
-			else
-			{
-				while (str[j] == ' ')
-					j++;
 				break;
 			}
 		}
-		/*printf("The value of split is: %s\n", new_arr[i]);*/
+		printf("The value of split is: %s\n", new_arr[i]);
 	}
 	new_arr[size] = NULL;
-
 	return (new_arr);
 }
 
@@ -76,13 +76,15 @@ char **allocmem(char *str, int size, char *new_arr[])
 	int i, j, w_size;
 
 	j = 0;
-	for (i = 0; i < size - 1; i++)
+	for (i = 0; i < size; i++)
 	{
 		w_size = 0;
+
 		while (str[j] != ' ' && str[j] != '\0')
 		{
 			w_size++;
 			j++;
+			printf("The value of: %d\n", j);
 		}
 		new_arr[i] = malloc(sizeof(char) * w_size + 1);
 	}
@@ -90,12 +92,12 @@ char **allocmem(char *str, int size, char *new_arr[])
 }
 
 /**
- * get_size - get the size of str
+ * get_w_size - get the size of str
  * @str: size to calculate
  * Return: return the size of str
  */
 
-int get_size(char *str)
+int get_w_size(char *str)
 {
 	int i, size;
 

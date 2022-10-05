@@ -37,7 +37,7 @@ char *_strdup(char *str)
 		*(new_str + i) = *(str + i);
 	}
 
-	*(new_str + str_size + 1) = '\0';
+	*(new_str + str_size) = '\0';
 	return (new_str);
 }
 

@@ -54,6 +54,7 @@ char **strtow(char *str)
 					j++;
 					tmp++;
 				}
+				new_arr[i][tmp] = '\0';
 				break;
 			}
 		}
@@ -80,13 +81,27 @@ char **allocmem(char *str, int size, char *new_arr[])
 	{
 		w_size = 0;
 
-		while (str[j] != ' ' && str[j] != '\0')
+		while (str[j] != '\0')
 		{
-			w_size++;
-			j++;
-			printf("The value of: %d\n", j);
+			if (str[j] == ' ')
+			{
+				while (str[j] == ' ')
+				{
+					j++;
+				}
+			}
+			else
+			{
+				while (str[j] != ' ')
+				{
+					j++;
+					w_size++;
+				}
+				new_arr[i] = malloc(sizeof(char) * w_size + 1);
+			/*	printf("j = %d; w_size = %d\n", j, w_size);*/
+				break;
+			}
 		}
-		new_arr[i] = malloc(sizeof(char) * w_size + 1);
 	}
 	return (new_arr);
 }

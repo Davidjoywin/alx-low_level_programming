@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -26,8 +27,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (new_string == NULL)
 		return (NULL);
-
-	if ((int)n >= s2_size)
 
 	for (i = 0; i < s1_size; i++)
 		new_string[i] = s1[i];

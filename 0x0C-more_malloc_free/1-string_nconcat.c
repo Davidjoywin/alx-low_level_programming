@@ -9,7 +9,7 @@
  * Return: returns the concatenated strings
  */
 
-char *string-nconcat(char *s1, char *s2, unsigned int n)
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	int i, s1_size, *new_string;
 

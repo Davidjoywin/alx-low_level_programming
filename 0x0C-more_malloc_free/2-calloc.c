@@ -5,7 +5,7 @@
  * _calloc - allocates memory for an array using malloc
  * @nmemb: number of item to retain memory for
  * @size: size of type to retain memory for
- * Return: return a generic pointer type 
+ * Return: return a generic pointer type
  */
 
 void *_calloc(unsigned int nmemb, unsigned int size)

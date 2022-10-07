@@ -10,9 +10,10 @@
 
 int *array_range(int min, int max)
 {
-	int *new_mem;
+	int range, *new_mem;
 
-	new_mem = malloc(char(int) * (max - min))
+	range = max - min
+	new_mem = malloc(char(int) *range)
 	if (new_mem == NULL && min > max)
 		return (NULL);
 

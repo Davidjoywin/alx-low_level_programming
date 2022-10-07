@@ -22,13 +22,13 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 			free(NULL);
 			return (NULL);
 		}
-		
+
 		for (i = 0; i < old_size; i++)
 			new_ptr[i] = ptr[i];
 		free(ptr);
 		return (new_ptr);
 	}
-	
+
 	if (new_size == old_size)
 		return (ptr);
 

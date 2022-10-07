@@ -12,8 +12,7 @@ int convert_to_int(char num[]);
 
 int main(int argc, char *argv[])
 {
-	int i;
-	unsigned long long mul;
+	unsigned long mul;
 
 	if (argc != 3)
 	{
@@ -23,7 +22,7 @@ int main(int argc, char *argv[])
 
 	mul = convert_to_int(argv[1]) * convert_to_int(argv[2]);
 
-	printf("%d\n", mul);
+	printf("%lu\n", mul);
 
 	return (0);
 }
@@ -53,7 +52,7 @@ int get_size(char num[])
 int convert_to_int(char num[])
 {
 	int i, tmp, size_char;
-	unsigned long long converted_num;
+	unsigned long converted_num;
 
 	converted_num = 0;
 	size_char = get_size(num);
@@ -63,6 +62,6 @@ int convert_to_int(char num[])
 		converted_num *= 10;
 		converted_num += tmp;
 	}
-	return(converted_num);
+	return (converted_num);
 }
 

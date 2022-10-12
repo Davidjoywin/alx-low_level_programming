@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "3-calc.h"
 
 /**
@@ -25,8 +26,13 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(99);
 	}
-	if ((argv[2] == "/" || argv[2] == "%") && argv[3] == 0)
-	{2
+	if (strcmp(argv[2], "%") && atoi(argv[3]) == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
+	if (strcmp(argv[2], "/") && atoi(argv[3]) == 0)
+	{
 		printf("Error\n");
 		exit(100);
 	}

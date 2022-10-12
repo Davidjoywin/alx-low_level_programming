@@ -1,6 +1,12 @@
 #include <string.h>
 #include "3-calc.h"
 
+/**
+ * get_op_func - get operator
+ * @s: operator used
+ * Return: returns an int
+ */
+
 int (*get_op_func(char *s))(int a, int b)
 {
 	int i;

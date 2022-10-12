@@ -4,7 +4,7 @@
 /**
  * print_opcodes - print the operation code of this program
  * @a: address of the main function
- * @b: number of the bytes to print
+ * @n: number of the bytes to print
  * Return: void
  */
 void print_opcodes(char *a, int n)

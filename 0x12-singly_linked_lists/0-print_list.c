@@ -2,7 +2,7 @@
 #include "lists.h"
 
 /**
- * list_len - function tha prints all the elements of a list_t list
+ * print_list - function tha prints all the elements of a list_t list
  * @h: head of the linked list
  * Return: return the number of nodes
  */
@@ -13,7 +13,7 @@ size_t print_list(const list_t *h)
 
 	n = 0;
 	while (h != NULL)
-	{	
+	{
 		if (h->str == NULL)
 		{
 			printf("[0] %p\n", h->str);
